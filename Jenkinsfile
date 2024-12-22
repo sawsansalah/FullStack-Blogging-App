@@ -37,8 +37,8 @@ pipeline {
             steps {
             withSonarQubeEnv('sonar-server') {
 
-            sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=bloggingApp -
-            Dsonar.projectKey=bloggingApp \
+            sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=bloggingApp \
+            -Dsonar.projectKey=bloggingApp \
             -Dsonar.java.binaries=target -Dsonar.branch.name=main'''
 
             sh "echo $SCANNER_HOME"
