@@ -39,9 +39,8 @@ pipeline {
 
             sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=bloggingApp \
             -Dsonar.projectKey=bloggingApp \
-            -Dsonar.java.binaries=target -Dsonar.branch.name=main'''
+            -Dsonar.java.binaries=target'''
 
-            sh "echo $SCANNER_HOME"
 
             }
             }
