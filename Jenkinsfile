@@ -45,6 +45,14 @@ pipeline {
             }
             }
             }
+            stage('Quilty Gate Check') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+
+                  waitForQualityGate abortPipeline: false, credentialsId: 'sonar-secret'
+                }
+            }
+            }
 
     }
 }
