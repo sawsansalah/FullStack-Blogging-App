@@ -1,5 +1,5 @@
 pipeline { 
-    agent any
+    agent { label "slave-01"}
     
     tools {
         maven 'maven3'
